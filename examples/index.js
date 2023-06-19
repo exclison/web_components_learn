@@ -17,3 +17,13 @@ customElements.define(
         }
     }
 );
+
+
+const shadow_dom = document.getElementById('shadow_dom')
+let shadowRoot = shadow_dom.attachShadow({ mode: 'open' })
+shadowRoot.innerHTML = `
+<div>this is shadow dom</div>
+`
+
+console.log(shadow_dom, 'shadow_dom')
+console.log(shadow_dom.shadowRoot, 'shadowRoot')

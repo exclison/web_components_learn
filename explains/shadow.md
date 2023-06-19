@@ -4,7 +4,7 @@ Web components 的一个重要属性是封装——可以将标记结构、样�
 
 ## 基本用法
 
-可以使用 Element.attachShadow() 方法来将一个 shadow root 附加到任何一个元素上。它接受一个配置对象作为参数，该对象有一个 mode 属性，值可以是 open 或者 closed
+可以使用 `Element.attachShadow()` 方法来将一个 shadow root 附加到任何一个元素上。它接受一个配置对象作为参数，该对象有一个 mode 属性，值可以是 open 或者 closed
 
 ```javascript
 let shadow = elementRef.attachShadow({ mode: "open" });
@@ -17,7 +17,7 @@ open 表示可以通过页面内的 JavaScript 方法来获取 Shadow DOM，例�
 let myShadowDom = myCustomElem.shadowRoot;
 ```
 
-如果你将一个 Shadow root 附加到一个 Custom element 上，并且将 mode 设置为 closed，那么就不可以从外部获取 Shadow DOM 了——myCustomElem.shadowRoot 将会返回 null。
+如果你将一个 Shadow root 附加到一个 Custom element 上，并且将 mode 设置为 closed，那么就不可以从外部获取 Shadow DOM 了——`myCustomElem.shadowRoot` 将会返回 null。
 
 如果你想将一个 Shadow DOM 附加到 custom element 上，可以在 custom element 的构造函数中添加如下实现（目前，这是 shadow DOM 最实用的用法）：
 
@@ -47,14 +47,14 @@ shadow.appendChild(style);
 ```
 
 使用外部引入的样式
+
 ```javascript
 // 将外部引用的样式添加到 Shadow DOM 上
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 将所创建的元素添加到 Shadow DOM 上
 
 shadow.appendChild(linkElem);
-
 ```
