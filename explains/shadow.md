@@ -11,7 +11,7 @@ let shadow = elementRef.attachShadow({ mode: "open" });
 let shadow = elementRef.attachShadow({ mode: "closed" });
 ```
 
-open 表示可以通过页面内的 JavaScript 方法来获取 Shadow DOM，例如使用 Element.shadowRoot 属性：
+open 表示可以通过页面内的 JavaScript 方法来获取 Shadow DOM，例如使用 `Element.shadowRoot` 属性：
 
 ```javascript
 let myShadowDom = myCustomElem.shadowRoot;
