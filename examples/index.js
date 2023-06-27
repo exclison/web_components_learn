@@ -12,15 +12,16 @@ customElements.define(
             let template = document.getElementById("my-paragraph");
             let templateContent = template.content;
 
-            const shadowRoot = this.attachShadow({ mode: "open" });
+            const shadowRoot = this.attachShadow({ mode: "closed" });
             shadowRoot.appendChild(templateContent.cloneNode(true));
+            console.log(shadowRoot,'rout')
         }
     }
 );
 
 
 const shadow_dom = document.getElementById('shadow_dom')
-let shadowRoot = shadow_dom.attachShadow({ mode: 'open' })
+let shadowRoot = shadow_dom.attachShadow({ mode: 'closed' })
 shadowRoot.innerHTML = `
 <div>this is shadow dom</div>
 `
