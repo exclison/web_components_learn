@@ -142,12 +142,16 @@ class NavBar extends HTMLElement {
             </div>
         `;
   }
+  // 当 custom element 首次被插入文档 DOM 时，被调用。
   connectedCallback() {
     this.updatehasmenu();
     this.updatebackground();
   }
+  // 当 custom element 从文档 DOM 中删除时，被调用。
   disconnectedCallback() {}
+  // 当 custom element 被移动到新的文档时，被调用。
   adoptedCallback() {}
+  // 当 custom element 增加、删除、修改自身属性时，被调用。
   attributeChangedCallback(name, oldValue, newValue) {
     this[`update${name}`](newValue);
   }
