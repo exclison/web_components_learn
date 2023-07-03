@@ -12,14 +12,29 @@ customElements.define(
             let template = document.getElementById("my-paragraph");
             let templateContent = template.content;
 
-            const shadowRoot = this.attachShadow({ mode: "closed" });
+            const shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(templateContent.cloneNode(true));
-            console.log(shadowRoot,'rout')
+            console.log(shadowRoot, 'rout')
+
+            const style = document.createElement('style')
+            style.textContent = `
+            :host{
+                color:#0f0;
+            }
+            :host(.footer){
+                color:#00f;
+            }
+            :host-context(h1){
+                color:#f00;
+            }
+            `
+
+            shadowRoot.appendChild(style)
         }
     }
 );
 
-
+// p标签挂载shadow dom
 const shadow_dom = document.getElementById('shadow_dom')
 let shadowRoot = shadow_dom.attachShadow({ mode: 'closed' })
 shadowRoot.innerHTML = `

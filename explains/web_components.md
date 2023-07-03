@@ -164,3 +164,11 @@ class NavBar extends HTMLElement {
 
 customElements.define("nav-bar", NavBar);
 ```
+
+### CSS 伪类
+与自定义元素特别相关的伪类：
+
+- :defined：匹配任何已定义的元素，包括内置元素和使用 CustomElementRegistry.define() 定义的自定义元素。
+- :host：选择 shadow DOM 的 shadow host，内容是它内部使用的 CSS。
+- :host()：选择 shadow DOM 的 shadow host，内容是它内部使用的 CSS（这样可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器的 shadow host 元素。(只在自定义元素上添加类名)
+- :host-context()：选择 shadow DOM 的 shadow host，内容是它内部使用的 CSS（这样可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。(选定元素的子元素是自定义元素)

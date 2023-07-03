@@ -5,22 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      :defined {
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <template id="my-paragraph">
       <style>
-        p {
+        /* p {
           color: white;
           background-color: #666;
           padding: 5px;
-        }
+        } */
+        /* :host {
+          background: rgba(0, 0, 0, 0.6);
+        } */
       </style>
-      <p><slot name="my-text">My default text</slot></p>
+      <p>text</p>
+
+      <!-- <p><slot name="my-text">My default text</slot></p> -->
     </template>
 
-    <my-paragraph>
+    <my-paragraph class="footer">
       <!-- <span slot="my-text">Let's have some different text!</span> -->
     </my-paragraph>
+
+    <h1>
+      <my-paragraph>
+      </my-paragraph>
+    </h1>
 
     <p id="shadow_dom">shadow</p>
 
