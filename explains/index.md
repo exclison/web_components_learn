@@ -18,7 +18,7 @@ Web Components 由三项主要技术组成，它们可以一起使用来创建�
 
 ## 使用 Custom element
 
-CustomElementRegistry 接口的实例用来处理 web 文档中的 custom elements — 该对象允许你注册一个 custom element，返回已注册 custom elements 的信息，等等。
+CustomElementRegistry 接口的实例用来处理 web 文档中的 custom elements — 该对象允许你注册一个 custom element，返回已注册 custom elements 的信息，等等。要获取它的实例，需要使用 window.customElements属性。
 
 CustomElementRegistry.define() 方法用来注册一个 custom element，该方法接受以下参数：
 
